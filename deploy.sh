@@ -1,5 +1,5 @@
 #!/bin/bash
-TARGET=dist/src.zip
+TARGET=src.zip
 
 # prune
 npm prune --production
@@ -9,7 +9,7 @@ if [ -f $TARGET ]; then
 fi
 
 echo "Zipping"
-zip -q -r $TARGET . -x dist/\* -x deploy.sh
+zip -q -r $TARGET . -x $TARGET -x deploy.sh
 
 # upload
 echo "Publishing"
