@@ -24,7 +24,7 @@ exports.handler = async (event, context) => {
         switch (event.requestContext.http.method) {
             
             case 'GET':
-                body = { status: "TeamCity is Awesome!", really: "yes" };
+                body = { status: "TeamCity is Awesome!", really: "no" };
                 break;
            
             default:
